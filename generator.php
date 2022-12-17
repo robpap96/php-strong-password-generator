@@ -7,7 +7,7 @@ require_once __DIR__ . "/functions.php";
     }
 
     if($result['password']){
-        $_SESSION['passoword'] = $result['passord'];
+        $_SESSION['password'] = $result['password'];
         header("Location: thankyou-page.php");
     }
     else {

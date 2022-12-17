@@ -18,7 +18,7 @@
         <form class="mb-3" action="generator.php" method="GET">
             <div class="mb-3">
                 <label for="password-length" class="form-label">Lunghezza password</label>
-                <input type="number" class="form-control" id="password-length" name="length" value="<?php echo $_GET['length'] ?>" min="4" max="32" required>
+                <input type="number" class="form-control" id="password-length" name="length" value="<?php echo $_GET['length'] ?>" min="8" max="32" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Genera</button>
@@ -26,14 +26,8 @@
 
         <?php  if($_SESSION['error']) :?>
             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                    <img src="..." class="rounded me-2" alt="...">
-                    <strong class="me-auto">Bootstrap</strong>
-                    <small>11 mins ago</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                </div>
                 <div class="toast-body">
-                    <?php echo $S_SESSION['error']; ?>
+                    <?php echo $_SESSION['error']; ?>
                 </div>
             </div>
 
